@@ -44,7 +44,7 @@ def main():
 
     for filename in root_dir:
         if args.long is True:
-            statinfo = os.stat(filename)                    # get statical information of files
+            statinfo = os.stat(args.root_path +"/"+ filename)                    # get statical information of files
             nlink   = statinfo.st_nlink                     # number of link
             pw_name = pwd.getpwuid(statinfo.st_uid).pw_name # get user name
             gr_name = grp.getgrgid(statinfo.st_gid).gr_name # get group name
